@@ -1,0 +1,36 @@
+<h2>Filme</h2>
+<?php if (! empty($this->movies) && $this->movies->count() > 0): ?>
+<div id="medialist" class="movies">
+	<div class="row">
+		<?php foreach ($this->movies as $idx => $movie): ?>
+		<div class="movie <?php echo ($idx % 2 === 0) ? 'left' : 'right'; ?>">
+			<div class="thumb">
+				<img src="/img/movies/tron_small.png" alt="Tron (1982)">
+			</div>
+			<div class="loaned">
+				<div class="loanedIcon">[v]</div>
+			</div>
+			<div class="info">
+				<?php $meta = $movie->getMetaInformation(); ?>
+				<table>
+					<tr>
+						<td class="title" colspan="2"><?php echo $movie->getTitle(); ?></td>
+					</tr>
+					<?php if (is_array($meta) && (! empty($meta))): ?>
+					<tr><td class="release" colspan="2">(<?php echo $meta['release']; ?>)</td></tr>
+					<tr class="written">
+						<td class="lbl">Drehbuch:</td>
+						<td class="val"><?php echo $this->pruneList($meta['writers'], 3); ?></td>
+					</tr>
+					<tr class="directed">
+						<td class="lbl">Regie:</td>
+						<td class="val"><?php echo $meta['director']; ?></td>
+					</tr>
+					<?php endif; ?>
+				</table>
+			</div>
+		</div>
+		<?php endforeach; ?>
+	</div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,33 @@
+<?php include 'inc/header.phtml'; ?>
+<h2 class="withSubTitle">Adminbereich</h2>
+<h3 class="subTitle">Buch bearbeiten</h3>
+
+<form id="mediaForm" action="/add-book" method="post">
+	<fieldset class="general">
+		<legend>Generelle Infos</legend>
+		<dl>
+			<dt class="inputLbl"><label for="title">Titel</label></dt>
+			<dd><input id="title" name="title" type="text"></dd>
+			<dt class="inputLbl"><label for="original_title">Originaltitel</label></dt>
+			<dd><input id="original_title" name="original_title" type="text"></dd>
+			<dt class="textareaLbl"><label for="blurb">Klappentext</label></dt>
+			<dd><textarea id="blurb" name="blurb" cols="1" rows="1"></textarea></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="additional">
+		<legend>Zusätzliche Infos</legend>
+		<dl>
+			<dt class="inputLbl"><label for="publisher">Verlag</label></dt>
+			<dd><input id="publisher" name="publisher" type="text"></dd>
+			<dt class="textareaLbl"><label for="authors">Autoren</label></dt>
+			<dd><textarea id="authors" name="authors" cols="1" rows="1"></textarea></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="formCtrl">
+		<ul>
+			<li><button id="subtmit" class="green">Speichern</button></li>
+			<li><button id="cancel" class="red">Abbrechen</button></li>
+		</ul>
+	</fieldset>
+</form>
+<?php include 'inc/footer.phtml'; ?>

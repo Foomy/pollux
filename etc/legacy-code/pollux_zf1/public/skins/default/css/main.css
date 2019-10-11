@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+#medialist {
+	width: 760px;
+}
+
+	#medialist .left {
+		float: left;
+	}
+
+	#medialist .right {
+		float: right;
+	}
+
+
+
+.movies .movie {
+	border: solid 1px #289fde;
+	background: #add8e6;
+	margin: 0 0 10px 5px;
+	padding: 5px 0;
+	width: 370px;
+	height: 100px;
+}
+
+	.movie .thumb {
+		border: solid #289fde;
+		border-width: 0 1px 0 0;
+		width: 100px;
+		float: left;
+	}
+
+		.movie .thumb img {
+			display: block;
+			margin: 0 auto;
+		}
+
+	.movie .loaned {
+		margin: 0 5px 0 0;
+		float: right;
+	}
+
+	.movie .info {
+			width: 240px;
+			margin: 0 0 0 5px;
+			float: left;
+	}
+
+		.movie .info .title {
+			font-weight: bold;
+		}
+
+			.movie .info td {
+				text-align: left;
+				vertical-align: top;
+			}
+
+		.movie .info .release {
+			padding: 0 0 3px 0;
+			font-weight: normal;
+			font-size: 11px;
+			text-align: left;
+		}
+
+		.movie .info .written,
+		.movie .info .directed {
+			font-size: 11px;
+		}
+
+			.movie .info .written .lbl {
+				width: 75px;
+			}
+
+
+
+.books .book {
+	border: solid 1px #289fde;
+	background: #add8e6;
+	width: 365px;
+	height: 100px;
+	margin: 0 0 10px 0;
+	padding: 5px 5px 5px 0;
+}
+
+	.books .thumb {
+		border: solid #289fde;
+		border-width: 0 1px 0 0;
+		width: 85px;
+		float: left;
+	}
+
+		.books .thumb img {
+			display: block;
+			margin: 0 auto;
+		}
+
+	.books .info {
+		width: 275px;
+		float: right;
+	}
+
+		.books .info div {
+			text-align: left;
+		}
+
+		.books .info .title {
+			margin: 0 0 5px 0;
+			font-weight: bold;
+			text-align: left;
+		}
+
+
+
+#wishlist .item {
+	border: solid 1px #289fde;
+	background: #add8e6;
+	margin: 0 0 5px 0;
+	padding: 3px;
+}
+
+	#wishlist .title {
+		font-weight: bold;
+	}
+
+
+
+.widget {
+	border: solid 1px #289fde;
+	border-radius: 10px;
+	background: #add8e6;
+	margin: 0 0 10px 5px;
+	padding: 15px 10px;
+}
+
+.suggestion {
+	width: 400px;
+}
+
+	.suggestion .item {
+		background: #0c607a;
+		margin: 0 0 5px 0;
+		padding: 3px;
+		color: white;
+	}

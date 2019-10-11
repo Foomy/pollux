@@ -1,0 +1,214 @@
+<?php include 'inc/htmlHeader.phtml'; ?>
+<div id="sitewrapper">
+	<div id="overlay"></div>
+
+	<div id="pagewrapper">
+		<header>
+			<h1>[HEADER]</h1>
+			<div id="navigation">
+				<?php include 'inc/navigation.phtml'; ?>
+			</div>
+		</header>
+
+		<div id="content">
+
+			<h2>Filme</h2>
+
+			<div id="medialist" class="movies">
+				<table>
+					<tr>
+						<th class="title">titel</th>
+						<th class="oTitle">originaltitel</th>
+						<th class="release">release</th>
+						<th class="actions"></th>
+					</tr>
+					<tr>
+						<td class="title">TRON</td>
+						<td class="oTitle">TRON</td>
+						<td class="release">1979</td>
+					</tr>
+					<tr>
+						<td class="title">Star Trek: Der Film</td>
+						<td class="oTitle">Star Trek: The Motion Picture</td>
+						<td class="release">1979</td>
+					</tr>
+					<tr>
+						<td class="title">Star Trek II: Der Zorn des Khan</td>
+						<td class="oTitle">Star Trek II: The Wrath of Khan</td>
+						<td class="release">1982</td>
+					</tr>
+					<tr>
+						<td class="title">Star Trek III: Auf der Suche nach Mr. Spock</td>
+						<td class="oTitle">Star Trek III: The Search For Spock</td>
+						<td class="release">1984</td>
+					</tr>
+				</table>
+
+				<?php include 'inc/pagination.phtml'; ?>
+			</div>
+
+		</div>
+
+		<footer>
+			[FOOTER]
+			<a href="/workfiles/" class="wfLink">Workfiles</a>
+		</footer>
+	</div>
+
+	<div id="layer"></div>
+</div>
+<?php include 'inc/htmlFooter.phtml'; ?>
+
+<!--
+.movies .movie {
+border: solid 1px #289fde;
+background: #add8e6;
+/*margin: 0 0 10px 5px;*/
+margin: 0.65789473684210526315789473684211% 1.3157894736842105263157894736842%; /* 5/760 10/760 */
+padding: 5px 0;
+width: 46.052631578947368421052631578947%; /* 350/760 */
+height: 100px;
+float: left;
+}
+
+.movie .thumb {
+border: solid #289fde;
+border-width: 0 1px 0 0;
+width: 28.571428571428571428571428571429%;
+float: left;
+}
+
+.movie .thumb img {
+display: block;
+margin: 0 auto;
+}
+
+.movie .info {
+width: 68.571428571428571428571428571429%;
+margin: 0 0 0 5px;
+float: left;
+}
+
+.movie .info .title {
+font-weight: bold;
+}
+
+.movie .info td {
+text-align: left;
+vertical-align: top;
+}
+
+.movie .info .release {
+padding: 0 0 3px 0;
+font-weight: normal;
+font-size: 11px;
+text-align: left;
+}
+
+.movie .info .written,
+.movie .info .directed {
+font-size: 11px;
+}
+
+.movie .info .written .lbl {
+width: 75px;
+}
+
+<div class="movie">
+	<div class="thumb">
+		<img src="/img/covers/movies/tron_small.png" alt="Tron (1982)">
+	</div>
+	<div class="info">
+		<table>
+			<tr>
+				<td class="title" colspan="2">TRON</td>
+			</tr>
+			<tr><td class="release" colspan="2">(1979)</td></tr>
+			<tr class="written">
+				<td class="lbl">Drehbuch:</td>
+				<td class="val">
+					Gene Roddenberry,<br>
+					Alan Dean Foster,<br>
+					Harold Livingston
+				</td>
+			</tr>
+			<tr class="directed">
+				<td class="lbl">Regie:</td>
+				<td class="val">Robert Wise</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="movie">
+	<div class="thumb">
+		<img src="/img/covers/movies/star.trek.the.motion.picture_small.png" alt="Tron (1979)">
+	</div>
+	<div class="info">
+		<table>
+			<tr>
+				<td class="title" colspan="2">Star Trek: The Motion Picture</td>
+			</tr>
+			<tr>
+				<td class="release" colspan="2">(1979)</td>
+			</tr>
+			<tr class="written">
+				<td class="lbl">Drehbuch:</td>
+				<td class="val">Steven Lisberger</td>
+			</tr>
+			<tr class="directed">
+				<td class="lbl">Regie:</td>
+				<td class="val">Steven Lisberger</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="movie">
+	<div class="thumb">
+		<img src="/img/covers/movies/star.trek.the.wrath.of.khan_small.jpg" alt="Star Trek II: The Wrath of Khan (1982)">
+	</div>
+	<div class="info">
+		<table>
+			<tr>
+				<td class="title" colspan="2">Star Trek II: The Wrath of Khan</td>
+			</tr>
+			<tr>
+				<td class="release" colspan="2">(1982)</td>
+			</tr>
+			<tr class="written">
+				<td class="lbl">Drehbuch:</td>
+				<td class="val">
+					Jack B. Sowards,<br>
+					Nicholas Meyer
+				</td>
+			</tr>
+			<tr class="directed">
+				<td class="lbl">Regie:</td>
+				<td class="val">Nicholas Meyer</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="movie">
+	<div class="thumb">
+		<img src="/img/covers/movies/star.trek.the.search.for.spock_small.jpg" alt="Star Trek III: The Search For Spock (1984)">
+	</div>
+	<div class="info">
+		<table>
+			<tr>
+				<td class="title" colspan="2">Star Trek III: The Search For Spock</td>
+			</tr>
+			<tr>
+				<td class="release" colspan="2">(1984)</td>
+			</tr>
+			<tr class="written">
+				<td class="lbl">Drehbuch:</td>
+				<td class="val">Harve Bennett</td>
+			</tr>
+			<tr class="directed">
+				<td class="lbl">Regie:</td>
+				<td class="val">Leonard Nimoy</td>
+			</tr>
+		</table>
+	</div>
+</div>
+-->

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.stackTrace {
+	margin: 0 0 0 30px;
+	font-family: 'Courier New', monospace;
+	font-size: 11px;
+}
+
+	.stackTrace .method {
+		padding: 0 0 5px 0;
+		text-indent: 20px;
+		font-size: 12px;
+	}

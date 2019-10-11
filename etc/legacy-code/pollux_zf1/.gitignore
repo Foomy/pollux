@@ -1,0 +1,28 @@
+# phpstorm project directory
+.idea/
+
+# eclipse project files
+.buildpath
+.project
+.settings/
+
+# ignore vi swapfiles
+.*.swp
+
+# librarys & symlinks
+library/Zend
+library/Foo
+public/js/jquery.min.js
+public/js/jquery-1.5.2.min.js
+
+# logs
+logs/
+
+# zend specific files
+.zfproject.xml
+
+# Netbeans files
+nbproject/
+
+# mysqldumps
+*.dump.sql

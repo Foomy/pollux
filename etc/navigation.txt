@@ -1,0 +1,39 @@
+Pollux - Navigation
+=====================
+
+* Hauptnavigation
+
+	- Filme
+		~ Controller: MovieController
+		~ Action: index
+		~ Route: /movies/
+		
+	- Bücher
+		~ Controller: BookController
+		~ Action: index
+		~ Route: /books/
+
+	- Profil
+		~ Controller: UserController
+		~ Action: profile
+		~ Route: /profile/<userid>
+		
+* Admin-Navi
+
+	- Film hinzufügen
+		~ Controller: MovieController
+		~ Action: add
+		~ Route: /movie/add
+		
+	- Buch hinzufügen
+		~ Controller: BookController
+		~ Action: add
+		~ Route: /book/add
+	
+	- Person hinzufügen
+		~ Controller: UserController
+		~ Action: add
+		~ Route: /user/add
+
+* Workfiles
+	~ Route: /workfiles/

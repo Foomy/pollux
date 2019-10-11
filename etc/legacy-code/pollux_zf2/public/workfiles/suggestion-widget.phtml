@@ -1,0 +1,45 @@
+<?php include 'inc/htmlHeader.phtml'; ?>
+<div id="sitewrapper">
+	<div id="overlay"></div>
+
+	<div id="pagewrapper">
+		<header><h1>[HEADER]</h1></header>
+
+		<aside>
+			<?php include 'inc/navigation.phtml'; ?>
+		</aside>
+
+		<div id="content">
+
+<div id="suggestMovie" class="widget suggestion movie is_suggestion">
+	<p>Diesen Film hast du schon lange nicht mehr gesehen:</p>
+	<div class="item">
+		<ul>
+			<li>Titel: Die Goonies</li>
+			<li>Zuletzt gesehen: 21.02.2010</li>
+		</ul>
+	</div>
+</div>
+<div id="suggestBook" class="widget suggestion book is_suggestion">
+	<p>Wie wärs mal wieder mit einem guten Buch?</p>
+	<div class="item">
+		<ul>
+			<li>Titel: Das Restaurant am Ende des Universums</li>
+			<li>Autor: Douglas Noel Adams</li>
+			<li>Erschienen: 1980</li>
+			<li>Gekauft am: 14.03.2012</li>
+		</ul>
+	</div>
+</div>
+
+		</div>
+
+		<footer>
+			[FOOTER]
+			<a href="/workfiles/" class="wfLink">Workfiles</a>
+		</footer>
+	</div>
+
+	<div id="layer"></div>
+</div>
+<?php include 'inc/htmlFooter.phtml'; ?>

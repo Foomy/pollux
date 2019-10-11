@@ -1,0 +1,170 @@
+@CHARSET "UTF-8";
+
+fieldset {
+	margin: 0 0 10px 0;
+	padding: 10px 20px 5px 20px;
+}
+
+	fieldset legend {
+		border: dashed 1px #aaa;
+		background: #C6E5F9;
+		margin-left: -10px;
+		padding: 2px 4px;
+	}
+
+label:after {
+	content: ':';
+}
+
+textarea,
+input[type=text],
+input[type=password] {
+	border: solid 1px #8eb0d9;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+input {
+}
+
+.checkboxLbl {
+	height: 24px;
+	padding: 7px 0 0 25px;
+	cursor: pointer;
+}
+
+.checkboxLbl.unchecked {
+	background: url(/skins/default/img/checkbox.png) no-repeat -5px 0;
+}
+
+.checkboxLbl.checked {
+	background: url(/skins/default/img/checkbox-checked.png) no-repeat -5px 0;
+}
+	.checkboxLbl label {
+		cursor: pointer;
+	}
+
+	.checkboxLbl label:after {
+		content: none;
+	}
+
+.checkbox {
+	position: absolute;
+	top: -10000px;
+}
+
+.formButton {
+	float: right;
+}
+
+.formCtrl {
+	padding: 10px 10px;
+	clear: both;
+}
+
+	.formCtrl ul li {
+		float: right;
+	}
+
+		.formCtrl .red {
+			color: red;
+		}
+
+		.formCtrl .green {
+			color: green;
+		}
+
+
+/*
+ * MedatypeForm
+ */
+#mediumTypeForm {
+	width: 240px;
+}
+
+	#mediumTypeForm fieldset {
+		border:solid #ccc;
+		border-width: 2px 0 0 0;
+	}
+
+		#mediumTypeForm input {
+			width: 200px
+		}
+
+
+/*
+ * MediaForm
+ */
+#mediaForm fieldset {
+	border: solid #ccc;
+	border-width: 2px 0 0 0;
+}
+
+#mediaForm .general {
+	width: 350px;
+	float: left;
+}
+
+#mediaForm .additional {
+	width: 300px;
+	margin: 0 0 0 420px;
+}
+
+	#mediaForm dd {
+		margin: 0 0 4px 0;
+	}
+
+	#mediaForm dt {
+		margin: 4px 0 0 0;
+	}
+
+	#mediaForm dt.fieldLbl {
+		float: left;
+	}
+
+	#mediaForm dt.textareaLbl {
+		margin: 7px 0 4px 0;
+	}
+
+	#mediaForm .general dt {
+		width: 85px;
+	}
+
+		#mediaForm .general input[type=text] {
+			width: 265px;
+		}
+
+		#mediaForm .general textarea {
+			width: 350px;
+			height: 160px;
+		}
+
+	#mediaForm .additional dt {
+		width: 60px;
+	}
+
+	#mediaForm .additional input[type=text] {
+		width: 240px;
+	}
+
+	#mediaForm .additional textarea {
+		width: 300px;
+		height: 105px;
+	}
+
+#personForm fieldset {
+	border: solid #ccc;
+	border-width: 2px 0 0 0;
+}
+
+	#personForm dl {
+		width: 184px;
+	}
+
+	#personForm dd {
+		margin: 0 0 4px 0;
+	}
+
+	#personForm fieldset .checkbox {
+			width: 145px;
+	}
