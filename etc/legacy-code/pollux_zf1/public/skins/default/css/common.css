@@ -1,0 +1,200 @@
+@CHARSET "UTF-8";
+
+/**
+ * File for common stylesheets.
+ *
+ * Table of contents:
+ * 1. Lists
+ * 2. Horizontal rules
+ * 3. Paragraphs
+ * 4. Links
+ * 5. Headlines
+ * 5.1 Simple headlines
+ * 5.2 No-margin headlines
+ * 6. Messageboxes
+ * 7. Alignment & Visibility
+ *
+ */
+
+
+
+/** 1. Lists */
+
+ul {
+	list-style-type: none;
+}
+
+
+
+/** 2. Horizontal rules */
+
+hr {
+	width: 90%;
+	color: orange;
+}
+
+
+
+/** 3. Paragraphs */
+
+p {
+	margin: 0 0 15px 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.small {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+
+
+/** 4. Links */
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+/*	color: #FF6C00; */
+	color: #555;
+}
+
+a:hover {
+	text-decoration: underline;
+/*	color: #FFC59F; */
+	color: black;
+}
+
+
+
+/** 5. Headlines */
+
+/** 5.1 Simple headlines */
+
+h1 {
+	font-size: 18px;
+	margin: 15px 0 25px 0;
+}
+
+h2 {
+	font-size: 16px;
+	margin: 15px 0 20px 0;
+}
+
+h3 {
+	font-size: 14px;
+	margin: 15px 0 15px 0;
+}
+
+h4 {
+	font-size: 12px;
+	margin: 15px 0 10px 0;
+}
+
+h5 {
+	font-size: 11px;
+	margin: 15px 0 5px 0;
+}
+
+/** 5.2 No-margin headlines */
+
+.head1 {
+	font-size: 1.5em;
+	font-weight:bold;
+}
+
+.head2 {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.head3 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.head4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.head5 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+
+
+/** 7. Messageboxes */
+
+.msgBoxError {
+	background: #fbb19b;
+	border: #dc4c42;
+	padding: 5px 10px;
+	color: black;
+}
+
+.msgBoxWarning {
+	background: #fbffb3;
+	border: #c4b70d;
+	padding: 5px 10px;
+	color: black;
+}
+
+.msgBoxInfo {
+	background: #ddeef9;
+	border: #8aafc4;
+	padding: 5px 10px;
+	color: black;
+}
+
+.msgBoxOk {
+	background: #cdeaca;
+	border: #58B548;
+	padding: 5px 10px;
+	color: black;
+}
+
+.msgBoxNotice {
+	background: #f6f7fa;
+	border: #c2cbcf;
+	padding: 5px 10px;
+	color: black;
+}
+
+code, .code {
+	background: #eee;
+	border:	#aaa;
+	padding: 5px 10px;
+	font-family: courier, 'courier new', monospace;
+	color: black;
+}
+
+
+/** 8. Alignment & Visibility */
+
+.hide {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.clear {
+	clear: both;
+}

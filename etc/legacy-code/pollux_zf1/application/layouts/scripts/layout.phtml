@@ -1,0 +1,38 @@
+<?php echo $this->doctype() . PHP_EOL; ?>
+<html>
+<head>
+	<?php echo $this->headMeta() . PHP_EOL; ?>
+	<?php echo $this->headTitle() . PHP_EOL; ?>
+
+	<?php $this->loadSkin($this->skin); ?>
+	<?php echo $this->headLink() . PHP_EOL; ?>
+	<?php echo $this->headScript(). PHP_EOL; ?>
+</head>
+<body>
+	<div id="sitewrapper">
+		<div id="overlay"></div>
+
+		<div id="pagewrapper">
+			<header><h1>[HEADER]</h1></header>
+
+			<aside>
+				<?php echo $this->partial('partials/navigation.phtml'); ?>
+				<?php // echo $this->getHelper('navigation')->menu(); ?>
+			</aside>
+
+			<div id="content">
+				<?php echo $this->layout()->content; ?>
+			</div>
+
+			<footer>
+				[FOOTER]
+				<?php if (APPLICATION_ENV === 'development'): ?>
+				<a href="/workfiles/" class="wfLink">Workfiles</a>
+				<?php endif; ?>
+			</footer>
+		</div>
+
+		<div id="layer"></div>
+	</div>
+</body>
+</html>

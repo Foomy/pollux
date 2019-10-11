@@ -1,0 +1,40 @@
+<?php include 'inc/htmlHeader.phtml'; ?>
+<div id="sitewrapper">
+	<div id="overlay"></div>
+
+	<div id="pagewrapper">
+		<header><h1>[HEADER]</h1></header>
+
+		<aside>
+			<?php include 'inc/navigation.phtml'; ?>
+		</aside>
+
+		<div id="content">
+
+<form id="mediumTypeForm" action="/add-mediumtype" method="post">
+	<fieldset class="general">
+		<legend>Medientyp</legend>
+		<dl>
+			<dt class="inputLbl"><label for="mediatype">Typenbezeichnung</label></dt>
+			<dd><input id="mediatype" name="mediatype" type="text"></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="formCtrl">
+		<ul>
+			<li><button id="cancel" class="red">Abbrechen</button></li>
+			<li><button id="subtmit" class="green">Speichern</button></li>
+		</ul>
+	</fieldset>
+</form>
+
+		</div>
+
+		<footer>
+			[FOOTER]
+			<a href="/workfiles/" class="wfLink">Workfiles</a>
+		</footer>
+	</div>
+
+	<div id="layer"></div>
+</div>
+<?php include 'inc/htmlFooter.phtml'; ?>
