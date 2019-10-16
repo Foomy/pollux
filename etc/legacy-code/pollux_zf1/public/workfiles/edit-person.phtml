@@ -1,0 +1,64 @@
+<?php include 'inc/htmlHeader.phtml'; ?>
+<div id="sitewrapper">
+	<div id="overlay"></div>
+
+	<div id="pagewrapper">
+		<header><h1>[HEADER]</h1></header>
+
+		<aside>
+			<?php include 'inc/navigation.phtml'; ?>
+		</aside>
+
+		<div id="content">
+
+<h2>Person editieren</h2>
+
+<form id="personForm" action="/add-person/" method="post">
+	<fieldset class="general">
+		<legend>Login Infos</legend>
+		<dl>
+			<dt class="inputLbl"><label for="username">Username</label></dt>
+			<dd><input id="username" name="username" type="text"></dd>
+			<dt class="inputLbl"><label for="password">Kennwort</label></dt>
+			<dd><input id="password" name="password" type="password"></dd>
+			<dt class="checkboxLbl is_checkboxLbl is_canLoginLbl unchecked">Login möglich</dt>
+			<dd class="checkbox"><input id="can_login" class="is_canLoginCb" name="can_login" type="checkbox"></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="formCtrl">
+		<ul>
+			<li><button id="subtmit" class="green">Speichern</button></li>
+			<li><button id="cancel" class="red">Abbrechen</button></li>
+		</ul>
+	</fieldset>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+	$(document).ready(function () {
+		$('.is_checkboxLbl').unbind('click').bind('click.toggle', function () {
+			if (0 === $('.is_canLoginCb:checked').length) {
+				$('.is_canLoginCb').attr('checked', true);
+				$('.is_canLoginLbl').removeClass('unchecked');
+				$('.is_canLoginLbl').addClass('checked');
+			}
+			else {
+				$('.is_canLoginCb').attr('checked', false);
+				$('.is_canLoginLbl').removeClass('checked');
+				$('.is_canLoginLbl').addClass('unchecked');
+			}
+		});
+	});
+/* ]]> */
+</script>
+
+		</div>
+
+		<footer>
+			[FOOTER]
+			<a href="/workfiles/" class="wfLink">Workfiles</a>
+		</footer>
+	</div>
+
+	<div id="layer"></div>
+</div>
+<?php include 'inc/htmlFooter.phtml'; ?>

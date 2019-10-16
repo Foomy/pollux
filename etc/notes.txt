@@ -1,0 +1,30 @@
+Eigenschaften eines Films
+===========================
+
+Titel
+Originaltitel
+Directors Cut (Flag)
+Zusatzinfo (Special-Edition, Collectors-Edition)
+Regie
+Drehbuch
+Darsteller
+Laufzeit
+Medium (VHS | DVD | Blu-Ray)
+Covertext
+Genre
+Wer hat den Film ausgeliehen?
+
+* Nutzung via Smartphone
+
+
+================================================================
+
+Menü -> ViewHelfer Navigation (incl. ACL integration)
+
+================================================================
+
+Formulare:
+
+	* Felder während der Eingabe validieren. Wenn eingabe korrekt -> Rahmen grün
+	* Korrekte Eingabe von CAPTCHAs (Matheaufgabe) direkt bestätigen.
+	* Errorzeile ist allgemeine Messagezeile -> pos. grün, neg. rot.

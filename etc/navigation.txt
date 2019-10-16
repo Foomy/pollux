@@ -1,0 +1,40 @@
+Pollux - Navigation
+=====================
+
+* Hauptnavigation
+
+	- Filme
+		~ Typ: MVC
+		~ Controller: MovieController
+		~ Action: index
+		~ Route: /movies/
+		
+	-Bücher
+		~ Typ: MVC
+		~ Controller: BookController
+		~ Action: index
+		~ Route: /books/
+		
+* Admin-Navi
+
+	- Film hinzufügen
+		~ Typ: MVC
+		~ Controller: MovieController
+		~ Action: add
+		~ Route: /movie/add
+		
+	- Buch hinzufügen
+		~ Typ: MVC
+		~ Controller: BookController
+		~ Action: add
+		~ Route: /book/add
+	
+	- Person hinzufügen
+		~ Typ: MVC
+		~ Controller: UserController
+		~ Action: add
+		~ Route: /user/add
+
+	- Workfiles
+		~ Typ: URL
+		~ Route: /workfiles/

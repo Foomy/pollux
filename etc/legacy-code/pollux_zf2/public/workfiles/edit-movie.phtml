@@ -1,0 +1,45 @@
+<?php include 'inc/header.phtml'; ?>
+<h2 class="withSubTitle">Adminbereich</h2>
+<h3 class="subTitle">Film bearbeiten</h3>
+
+<form id="mediaForm" action="/add-movie" method="post">
+	<fieldset class="general">
+		<legend>Generelle Infos</legend>
+		<dl>
+			<dt class="leftLbl"><label for="title">Titel</label></dt>
+			<dd>
+				<input id="title" name="title" type="text" class="is_required">
+				<div class="error">
+					<div class="arrow"></div>
+					<div class="contentCell">Dies ist ein Pflichtfeld!</div>
+				</div>
+			</dd>
+			<dt class="leftLbl"><label for="original_title">Originaltitel</label></dt>
+			<dd><input id="original_title" name="original_title" type="text"></dd>
+			<dt class="topLbl"><label for="blurb">Klappentext</label></dt>
+			<dd><textarea id="blurb" name="blurb" rows="1" cols="1"></textarea></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="additional">
+		<legend>Zusätzliche Infos</legend>
+		<dl>
+			<dt class="leftLbl"><label for="medium">Datenträger</label></dt>
+			<dd><input id="medium" name="medium" type="text"></dd>
+			<dt class="leftLbl"><label for="genre">Genre</label></dt>
+			<dd><input id="genre" name="genre" type="text"></dd>
+			<dt class="leftLbl"><label for="director">Regie</label></dt>
+			<dd><input id="director" name="director" type="text"></dd>
+			<dt class="topLbl"><label for="writers">Drehbuch</label></dt>
+			<dd><textarea id="writers" name="actors" rows="1" cols="1"></textarea></dd>
+			<dt class="topLbl"><label for="actors">Darsteller</label></dt>
+			<dd><textarea id="actors" name="actors" rows="1" cols="1"></textarea></dd>
+		</dl>
+	</fieldset>
+	<fieldset class="formCtrl">
+		<ul>
+			<li><button id="subtmit" class="green">Speichern</button></li>
+			<li><button id="cancel" class="red">Abbrechen</button></li>
+		</ul>
+	</fieldset>
+</form>
+<?php include 'inc/footer.phtml'; ?>
