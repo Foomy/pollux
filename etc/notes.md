@@ -19,15 +19,32 @@ https://de.wikipedia.org/wiki/Die_Ritter_der_Kokosnuß
 
 ### Eigenschaften
 
-Titel
-Originaltitel
-Directors Cut (Flag)
-Zusatzinfo (Special-Edition, Collectors-Edition)
-Regie
-Drehbuch
-Darsteller
-Laufzeit
-Medium (VHS | DVD | Blu-Ray)
-Covertext
-Genre
-Wer hat den Film ausgeliehen?
+* Titel
+* Originaltitel
+* Directors Cut (Flag)
+* Zusatzinfo (Special-Edition, Collectors-Edition)
+* Regie
+* Drehbuch
+* Darsteller
+* Laufzeit
+* Erscheinungsjahr
+* Medium (VHS | DVD | Blu-Ray)
+* Covertext
+* Genre
+* Verliehen (Flag)
+* Ausgeliehen an
+* Ausgeliehen seit
+
+## Bücher
+
+### Eigenschaften
+
+* Titel
+* Originaltitel
+* Autor
+* Erscheinungsjahr
+* Verlag
+* Genre
+* Verliehen (Flag)
+* Ausgeliehen an
+* Ausgeliehen seit
