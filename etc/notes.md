@@ -1,14 +1,17 @@
 Pollux Medialibrary
 ===================
 
-* Webanwendung zum Verwalten von Filmen und Büchern
-** Felder während der Eingabe validieren. Wenn eingabe korrekt -> Rahmen grün
-** Korrekte Eingabe von CAPTCHAs (Matheaufgabe) direkt bestätigen.
-** Errorzeile ist allgemeine Messagezeile
-** Menü -> ViewHelfer Navigation (incl. ACL integration)
+* Backend
+  * Symfony 5 mit Doctrine ORM und API Platform
+* Frontend
+  * Full featured React
+  * Simples Twig-Frontend während der Entwicklung
 * Nutzung via Smartphone
-** Android App mit Spiegelkopie der DB
-** Internet nur für DB-Sync notwendig
+  * Android App
+  * Synchronization via API
+  * Lokale Datenspeicherung im Handy
+  * Internet nur für DB-Sync notwendig
+  * Barcodescanner und Datenscraper für (geplante) Neuerwerbungen
 
 
 ## Filme
@@ -45,6 +48,7 @@ https://de.wikipedia.org/wiki/Die_Ritter_der_Kokosnuß
 * Erscheinungsjahr
 * Verlag
 * Genre
+* Klappentext
 * Verliehen (Flag)
 * Ausgeliehen an
 * Ausgeliehen seit
