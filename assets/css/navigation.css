@@ -1,0 +1,30 @@
+/*
+ * Main Navigation
+ */
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    background: #003f55;
+    border-radius: 5px;
+    max-width: 1400px;
+    margin: 0 auto 20px auto;
+    padding: 0 15px;
+}
+
+    .nav-main .nav-item {
+        padding: 10px;
+    }
+    .nav-main .nav-item:hover {
+        background: #005f78;
+    }
+
+        .nav-main .nav-item a {
+            height: 100%;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #ffffaa;
+            text-decoration: none;
+        }
+        .nav-main .nav-item a:hover {
+            color: #acac64;
+        }

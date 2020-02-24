@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Pollux Media Library{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                {% include 'logo.html.twig' %}
+            </div>
+            <h1 class="title">Pollux Media Library</h1>
+        </div>
+    </header>
+
+    {% include 'main-navigation.html.twig' %}
+
+    <div id="page-wrapper" class="{% block layouttype %}{% endblock %}">
+        <aside class="left-column">[:: left ::]</aside>
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+        <aside class="right-column">[:: right ::]</aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <blockquote>
+                <div class="text">"Ich hab da mal ein Legacytool gebastelt."</div>
+                <span class="signature">-- F. Rusznyak</span>
+            </blockquote>
+        </div>
+    </footer>
+</body>
 </html>

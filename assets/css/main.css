@@ -1,0 +1,24 @@
+/*
+ * typography
+ */
+blockquote {
+    display: inline-block;
+    padding: 5px;
+
+}
+blockquote:before {
+    position: relative;
+    top: 30px;
+    left: -10px;
+    height: 30px;
+    border: solid #ffffaa;
+    border-width: 0 0 0 2px;
+    background: #00222f;
+    content: '';
+    display: inline-block;
+}
+
+    blockquote .signature {
+        display: inline-block;
+        text-indent: 20px;
+    }
