@@ -4,13 +4,13 @@
 blockquote {
     display: inline-block;
     padding: 5px;
-
+    margin-top: -60px;
 }
 blockquote:before {
     position: relative;
-    top: 30px;
+    top: 65px;
     left: -10px;
-    height: 30px;
+    height: 60px;
     border: solid #ffffaa;
     border-width: 0 0 0 2px;
     background: #00222f;
