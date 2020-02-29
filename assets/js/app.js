@@ -1,11 +1,13 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
+import User from "./User";
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-// import $ from 'jquery';
+let App = {
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+    init: function () {
+        User.init();
+    }
+
+};
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    App.init();
+});

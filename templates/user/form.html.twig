@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} - User Management{% endblock %}
+{% block layouttype %}two-column{% endblock %}
+{% block javascripts %}{% endblock %}
+
+{% block side_navigation %}
+    <div class="nav-item">
+        <a href="{{ path('user-form', {userId: 'new'}) }}"><span class="fas fa-plus-square"></span> Add User</a>
+    </div>
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form, { 'action': path('user-save') }) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.username) }}
+        {{ form_row(form.canLogin) }}
+        {{ form_row(form.password) }}
+        {{ form_row(form.repeatPassword) }}
+        <button>{{ 'Add User'|trans }}</button>
+    {{ form_end(form) }}
+{% endblock %}

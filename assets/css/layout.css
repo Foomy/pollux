@@ -8,7 +8,6 @@
 html, body {
     background-color: #001a2a;
     font-family: sans-serif;
-    font-size: 86.6%;
 }
 
 body {
@@ -26,11 +25,6 @@ body {
             flex-direction: row;
             max-width: 1400px;
             margin: auto;
-        }
-
-        header .title {
-            font-size: 4em;
-            line-height: 1.85em;
         }
 
 #page-wrapper {
@@ -71,9 +65,9 @@ body {
     }
 
     .content {
-        border-radius: 25px;
+        border-radius: 15px;
         box-shadow: inset 20px 20px 60px #001624,
-                    inset -20px -20px 60px #001e30;
+                    inset -20px -20px 60px #00283c;
         padding: 15px 30px;
     }
 
@@ -89,6 +83,6 @@ footer {
     }
 
         footer blockquote {
-            font-family: 'Dancing Script';
-            font-size: 2em;
+            font-family: 'Dancing Script', serif;
+            font-size: 1.5em;
         }
