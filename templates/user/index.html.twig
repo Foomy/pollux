@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} - User Management{% endblock %}
+{% block layouttype %}two-column{% endblock %}
+{% block javascripts %}{% endblock %}
+
+{% block side_navigation %}
+{% endblock %}
+
+{% block body %}
+    <div class="user-listing">
+        {% if (users|length > 0) %}
+            <table class="listing-data">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>id</th>
+                    <th>username</th>
+                    <th>canLogin</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td class="list-actions">
+                            <span class="btn is-add-btn fas fa-plus-square" data-url="{{ path('user-form', {userId: 'new'}) }}"></span>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                {% for user in users %}
+                    <tr id="user-row-{{ user.getId() }}" class="is-user-row {{ (loop.index is even) ? 'even' : 'odd' }}">
+                        <td class="is-loop-index">{{ loop.index }}</td>
+                        <td style="width: 355px">{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ (user.canLogin) ? 'yes' : 'no' }}</td>
+                        <td class="list-actions">
+                            <span class="btn is-edit-btn fas fa-pen-square fa-1p5x" data-url="{{ path('user-form', {userId: user.getId()}) }}"></span>
+                            <span class="btn is-delete-btn fas fa-minus-square" data-url="{{ path('user-delete', {userId: user.getId()}) }}"></span>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="no-data">There are currently no users stored in the database.</div>
+        {% endif %}
+    </div>
+{% endblock %}

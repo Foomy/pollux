@@ -53,3 +53,12 @@ https://de.wikipedia.org/wiki/Die_Ritter_der_Kokosnuß
 * Verliehen (Flag)
 * Ausgeliehen an
 * Ausgeliehen seit
+
+## Benutzer
+
+Nur eingeloggte Benutzer können editieren.
+
+### Eigentschaften
+
+Benutzername*
+Kennwort*

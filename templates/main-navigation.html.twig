@@ -4,9 +4,14 @@
         <a href="{{ path('home') }}">Home</a>
     </div>
     <div class="nav-item">
-        <a href="javascript:">Books</a>
-    </div>
-    <div class="nav-item">
         <a href="javascript:">Movies</a>
     </div>
+    <div class="nav-item">
+        <a href="javascript:">Books</a>
+    </div>
+{#    {% if isLoggedIn %}#}
+        <div class="nav-item">
+            <a href="{{ path('users') }}">Users</a>
+        </div>
+{#    {% endif %}#}
 </nav>

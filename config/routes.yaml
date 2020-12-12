@@ -1,3 +1,19 @@
 home:
     path: /
     controller: App\Controller\HomeController::index
+
+users:
+    path: /users
+    controller: App\Controller\UserController::index
+user-profile:
+    path: /user/profile/{userId}
+    controller: App\Controller\UserController::profile
+user-form:
+    path: /user/form/{userId}
+    controller: App\Controller\UserController::form
+user-save:
+    path: /user/save
+    controller: App\Controller\UserController::save
+user-delete:
+    path: /user/delete/{userId}
+    controller: App\Controller\UserController::delete

@@ -1,5 +1,5 @@
 /*
- * Main Navigation
+ * main navigation
  */
 .nav-main {
     display: flex;
@@ -12,19 +12,41 @@
 }
 
     .nav-main .nav-item {
-        padding: 10px;
     }
     .nav-main .nav-item:hover {
         background: #005f78;
     }
 
         .nav-main .nav-item a {
+            display: inline-block;
             height: 100%;
+            padding: 10px;
             font-size: 1.3em;
             font-weight: 700;
             color: #ffffaa;
             text-decoration: none;
         }
         .nav-main .nav-item a:hover {
+            width: 100%;
             color: #acac64;
+        }
+
+/*
+ * sidebar navigation
+ */
+.nav-sidebar {
+}
+
+    .nav-sidebar .nav-item {
+        font-size: 0.8em;
+    }
+
+        .nav-sidebar .nav-item a {
+            display: inline-block;
+            height: 100%;
+            padding: 10px;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #ffffaa;
+            text-decoration: none;
         }

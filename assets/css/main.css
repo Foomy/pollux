@@ -2,23 +2,48 @@
  * typography
  */
 blockquote {
-    display: inline-block;
-    padding: 5px;
-    margin-top: -60px;
-}
-blockquote:before {
-    position: relative;
-    top: 65px;
-    left: -10px;
-    height: 60px;
     border: solid #ffffaa;
     border-width: 0 0 0 2px;
-    background: #00222f;
-    content: '';
     display: inline-block;
+    padding: 5px 5px 5px 7px;
 }
 
     blockquote .signature {
         display: inline-block;
         text-indent: 20px;
     }
+
+/*
+ * buttons
+ */
+
+.btn {
+    cursor: pointer;
+}
+
+/*
+ * data listings
+ */
+.listing-data {
+    width: 100%;
+}
+
+    .listing-data tr.odd {
+        background: #00384b;
+    }
+
+        .listing-data th {
+            background: #002a24;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        .listing-data td {
+            padding: 10px 5px;
+        }
+
+        .listing-data td.list-actions {
+            width: 100px;
+            font-size: 1.25em;
+            color: #ffffaa;
+        }
