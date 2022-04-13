@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## Pollux - Personal Media Library
 
-You can use the [editor on GitHub](https://github.com/Foomy/pollux/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Ever stand in the store and thought: "Did I already bought this movie?", or have you ever bought a new movie on a blu ray only to realize at home you now own it twice?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+That's where Pollux comes in. It's purpose is to help manage own medias like DVD, blu bay or books.
 
-### Markdown
+### General Architecture
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The idea is to manage a database with a web application. The second part is a mobile app used to read the data.
 
-```markdown
-Syntax highlighted code block
+### Web Application
 
-# Header 1
-## Header 2
-### Header 3
+TBD
 
-- Bulleted
-- List
+### Mobile App 
 
-1. Numbered
-2. List
+TBD
 
-**Bold** and _Italic_ and `Code` text
+### More Considered Features
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Foomy/pollux/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Barcode scanner.
+Web scraper.
