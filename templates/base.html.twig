@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>Pollux{% block title %}{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -14,6 +14,34 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header class="container">
+            <div id="logo">
+                <img src="https://placekitten.com/100/100" alt="Pollux Logo">
+            </div>
+            <div id="title">
+                <h1>Pollux - Personal Media Library</h1>
+            </div>
+            <div style="clear: both"></div>
+        </header>
+
+        <div id="pagewrapper" class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                {% include '_main-navigation.html.twig' %}
+            </nav>
+
+            <div id="content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+        <footer class="container">
+            <figure>
+                <blockquote class="col-7">
+                    "You see, the computer that runs it is a rather advanced one. In fact it is more powerful than<br>
+                    the sum total of all the computers on this planet including--and this is the tricky part--including
+                    itself."
+                </blockquote>
+                <figcaption class="col-7">—Douglas Adams, <cite>Dirk Gently's Holistic Detective Agency</cite></figcaption>
+            </figure>
+        </footer>
     </body>
 </html>

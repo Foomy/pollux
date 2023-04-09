@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+}
+
+body {
+}
+
+header {
+    border: solid #1c92a9;
+    border-width: 0 0 2px 0;
+}
+
+    #logo {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        float: left;
+    }
+
+    #title {
+        padding-top: 40px;
+    }
+
+    #pagewrapper {
+    }
+
+        #content {
+            background: white;
+            min-height: 300px;
+        }
+
+footer {
+    background: #ddd;
+    padding: 20px 10px;
+}
+
+    footer blockquote {
+        background: #efefef;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    footer figcaption {
+        text-indent: 20px;
+        line-height: 0.9em;
+    }
