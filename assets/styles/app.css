@@ -5,6 +5,7 @@
 }
 
 html, body {
+    background: white;
 }
 
 body {
@@ -14,21 +15,6 @@ header {
     border: solid #1c92a9;
     border-width: 0 0 2px 0;
 }
-
-    #logo {
-        border: 1px solid black;
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        float: left;
-    }
-
-    #title {
-        padding-top: 40px;
-    }
-
-    #pagewrapper {
-    }
 
         #content {
             background: white;
