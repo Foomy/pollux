@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('movies') }}
+{% endblock %}
+
+{% block title %} - Movies{% endblock %}
+
+{% block body %}
+    <div id="movies" class="list movies">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>title</th>
+                <th>genre</th>
+                <th>duration</th>
+                <th>release year</th>
+                <th>lent</th>
+                <th scope="col">actions</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Titel suchen...">
+                </td>
+                <td>
+                    <select name="genre">
+                        <option value="0">Genre filten...</option>
+                        <option>Science-Fiction</option>
+                        <option>Komödie</option>
+                        <option>...</option>
+                    </select>
+                </td>
+                <td colspan="3"></td>
+                <td>
+                    <button type="button" class="js-btn-add btn btn-success"><i class="bi-plus-circle"></i></button>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="7"></td>
+                </tr>
+            </tfoot>
+            {% if movies is not empty %}
+                <tbody>
+                {% for movie in movies %}
+                    <tr>
+                        <td>{{ movie.title }}</td>
+                        <td>{{ movie.genre }}</td>
+                        <td>
+                            {% if (movie.duration > 0) %}
+                            {{ movie.duration }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if (movie.releaseYear > 0) %}
+                            {{ movie.releaseYear }}
+                            {% endif %}
+                        </td>
+                        <td>
+{# @ToDo: Implement field lent here! Consider Boolean UI-Widget for easy change in list view. #}
+                        </td>
+                        <td>
+                            <button type="button" class="js-btn-edit btn btn-primary" data-id="{{ movie.id }}">
+                                <i class="bi-pencil"></i>
+                            </button>
+                            <button type="button" class="js-btn-detail btn btn-primary"
+                                    data-id="{{ movie.id }}" data-toggle="modal" data-target="#exampleModalButton">
+                                <i class="bi-zoom-in"></i>
+                            </button>
+                            <button type="button" class="js-btn-delete btn btn-danger" data-id="{{ movie.id }}">
+                                <i class="bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            {% else %}
+                <tbody>
+                <tr>
+                    <td colspan="8">
+                        No data found with given criteria.
+                    </td>
+                </tr>
+                </tbody>
+            {% endif %}
+        </table>
+    </div>
+{% endblock %}

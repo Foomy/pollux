@@ -1,14 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 html, body {
     background: white;
-}
-
-body {
 }
 
 header {
@@ -16,10 +7,23 @@ header {
     border-width: 0 0 2px 0;
 }
 
-        #content {
-            background: white;
-            min-height: 300px;
+    #header-content {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+        h1.title {
+            margin: 15px 0 0 7px;
+            font-size: 2.2rem;
         }
+
+#content {
+    background: white;
+    margin: auto;
+    padding: 20px 0;
+    min-height: 300px;
+    max-width: 1275px;
+}
 
 footer {
     background: #ddd;

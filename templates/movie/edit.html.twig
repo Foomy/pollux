@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('movies') }}
+{% endblock %}
+
+{% block title %} - Movies{% endblock %}
+
+{% block body %}
+    <div id="add-movie" class="mt-3">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col mb-3 input-group">
+                {{ form_label(form.directorsCut) }}
+                {{ form_widget(form.directorsCut) }}
+            </div>
+            <div class="col mb-3 input-group">
+                {{ form_label(form.medium) }}
+                {{ form_widget(form.medium) }}
+            </div>
+
+{#            <div class="col mb-3 input-group">#}
+{#                {{ form_label(form.lentTo) }}#}
+{#                {{ form_widget(form.lentTo) }}#}
+{#            </div>#}
+{#            <div class="col mb-3 input-group">#}
+{#                {{ form_label(form.lentSince) }}#}
+{#                {{ form_widget(form.lentSince) }}#}
+{#            </div>#}
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="mb-3 input-group">
+                    {{ form_label(form.title) }}
+                    {{ form_widget(form.title) }}
+                </div>
+                <div class="mb-3 input-group">
+                    {{ form_label(form.originalTitle) }}
+                    {{ form_widget(form.originalTitle) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.cast) }}
+                    {{ form_widget(form.cast) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.director) }}
+                    {{ form_widget(form.director) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.writer) }}
+                    {{ form_widget(form.writer) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3">
+                    {{ form_label(form.duration) }}
+                    {{ form_widget(form.duration) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.genre) }}
+                    {{ form_widget(form.genre) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.releaseYear) }}
+                    {{ form_widget(form.releaseYear) }}
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_label(form.additionalInfo) }}
+                    {{ form_widget(form.additionalInfo) }}
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                {{ form_label(form.blurb) }}
+                {{ form_widget(form.blurb) }}
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
