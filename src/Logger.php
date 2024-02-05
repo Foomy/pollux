@@ -1,5 +1,6 @@
 <?php
 
+namespace App;
 
 final class Logger
 {
@@ -37,9 +38,19 @@ final class Logger
         return $this;
     }
 
-    public function log(): void
+    public function log($var): self
     {
-
+        if (is_array($var)) {
+            error_log(print_r($var, true));
+        }
+        else if (is_object($var)) {
+            // todo: find a way to serialize the obejct
+            error_log($var);
+        }
+        else {
+            error_log($var);
+        }
+        return $this;
     }
 
     public function setCustomStyle(string $customStyle): void
