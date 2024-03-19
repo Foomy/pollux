@@ -1,24 +1,39 @@
 <?php
 
+use App\Autoload;
+use App\Router;
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 defined('APPLICATION_PATH')
 || define('APPLICATION_PATH', dirname(__DIR__));
 
-//require_once APPLICATION_PATH . '/src/Logger.php';
-require_once APPLICATION_PATH . '/src/Autoloader.php';
+require_once APPLICATION_PATH . '/src/Autoload.php';
+(new Autoload())
+    ->loadFromConfig()
+    ->loadFromFolder(APPLICATION_PATH . '/src/Controller/')
+    ->loadFromFolder(APPLICATION_PATH . '/src/DataTransfer/');
 
-$routes = include APPLICATION_PATH . '/config/routes.php';
 
-$route  = array_filter($routes, static function ($route) {
-    $rightUrl  = ($route['route'] === str_replace('/api', '', $_SERVER['REQUEST_URI']));
-    $rightVerb = ('GET' === $route['verb']);
+require_once APPLICATION_PATH . '/src/Router.php';
+$route = (new Router())->getRoute();
 
-    return ($rightUrl && $rightVerb);
-});
+if (null === $route) {
+    header('Content-Type: application/json; charset=utf-8', true, 404);
+    echo json_encode([
+        'code'    => 404,
+        'message' => 'Resource not found!',
+    ], JSON_THROW_ON_ERROR);
+    die();
+}
 
-(new Logger())
-    ->debug($routes)
-    ->debug($_SERVER['REQUEST_URI'])
-    ->debug($_SERVER['REQUEST_METHOD']);
+$controller = $route->controller;
+$method     = $route->method;
+
+if (array_key_exists('uuid', $route->params)) {
+    (new $controller)->$method($route->params['uuid']);
+    exit;
+}
+
+(new $controller)->$method();
